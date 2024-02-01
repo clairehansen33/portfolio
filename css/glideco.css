@@ -1,0 +1,126 @@
+/* glideco Styles */
+.glide__track {
+  position: relative;
+}
+.glide__track .glide__slides {
+  overflow: auto;
+  touch-action: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  gap: 23px;
+  margin-left: 6px;
+}
+
+.glide__track .glide__slides::-webkit-scrollbar {
+  display: none;
+}
+
+/* Set the default width 👇 (~300px for 4 tiles) */
+.glide__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  scroll-snap-align: start;
+  width: 300px;
+}
+
+.glide__slide .dragging-active {
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+.glide__slide a {
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.glide__slide .title__wrap {
+  padding: 3% 15px;
+}
+.glide__slide .title__wrap p {
+  font-family: var(--petco__font-family-regular);
+  font-weight: normal;
+  text-align: center;
+  font-size: clamp(12px, 1.25vw, 16px);
+  line-height: 1.1;
+}
+
+.glide__slide .img__wrap {
+}
+.glide__slide .img__wrap img {
+  width: 100%;
+  height: 100%;
+  min-height: 1px;
+  object-fit: contain;
+}
+
+.glide__track .glide__bullets {
+  bottom: 0;
+}
+
+.glide__track .glide__bullet {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0 0.5rem;
+}
+
+.glide__track .glide__bullet.active {
+  border: 2px solid white;
+  outline: none;
+}
+
+.glide__arrows {
+  display: block;
+}
+.glide__arrows .glide__arrow {
+  border-radius: 50%;
+  border: none;
+  background-color: #fff;
+  font-size: 20px;
+  color: #707070;
+  box-shadow: none;
+  text-shadow: none;
+  max-width: 45px;
+  height: 45px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: transparent !important;
+}
+
+.glide__arrows .glide__arrow--left {
+  background-image: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_20/slider-arrow-left");
+  left: 1rem;
+}
+.glide__arrows .glide__arrow--right {
+  background-image: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_20/slider-arrow-right");
+  right: 1rem;
+}
+
+/* @media screen and (max-width: 768px) {
+        .glide__slide-placeholder {
+          display: none;
+        }
+        .glide__track {
+          overflow: visible;
+        }
+        .glide__arrows {
+          display: none !important;
+          position: relative;
+          bottom: -60px;
+          left: 25px;
+          display: flex;
+          justify-content: center;
+        }
+        .glide__arrows .glide__arrow--left {
+          left: unset;
+          margin-left: -70px;
+        }
+        .glide__arrows .glide__arrow--right {
+          right: unset;
+          margin-right: -70px;
+        }
+      } */
+/* end glideco Styles */

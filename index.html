@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>new portfolio</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/glideco.css" />
+    <link rel="stylesheet" type="text/css" href="css/glide.core.css" />
+    <link rel="stylesheet" type="text/css" href="css/glide.theme.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="#home" class="logo" aria-label="Logo, go to homepage.">
+        <img src="/img/CH.svg" alt="Logo." width="60" height="60" />
+      </a>
+      <nav role="navigation">
+        <div id="menu-bar">
+          <div id="menu" onclick="onClickMenu()">
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
+          </div>
+          <ul class="nav" id="nav">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="work.html">Portfolio</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="menu-bg" id="menu-bg"></div>
+      </nav>
+    </header>
+    <main role="main">
+      <section id="hero">
+        <div class="container">
+          <div class="text__wrap">
+            <div>
+              <h1>Claire Hansen</h1>
+              <h2>Senior Web Content Developer at Petco</h2>
+              <h3>
+                I have a flashy job title but I actually just do pretty basic
+                coding for a big yet highly problematic website.
+              </h3>
+              <div class="logo__wrap">
+                <img
+                  src="/img/github-mark/github-mark-white.svg"
+                  alt="GitHub logo."
+                />
+                <img
+                  src="/img/LinkedIn-Logos/In/Digital/White/1x/In-White-26.png"
+                  alt="LinkedIn logo."
+                />
+              </div>
+            </div>
+          </div>
+          <div class="img__wrap">
+            <img src="/img/headshot-1.png" alt="Headshot of Claire Hansen." />
+          </div>
+        </div>
+      </section>
+      <section id="experience">
+        <div class="container">
+          <h1>My Work</h1>
+          <!-- petco -->
+          <div class="content__wrap">
+            <div class="text__wrap">
+              <h2>
+                Senior Web Content Developer | <strong>Petco</strong>
+                <span style="font-size: 16px">Mar 2021 — Present</span>
+              </h2>
+              <h2>
+                Web Content Developer
+                <span style="font-size: 16px">July 2020 — Mar 2021</span>
+              </h2>
+              <p>
+                At Petco, it is my sole responsibility to build and manage the
+                front-end content on our homepage, petco.com. Our creative team
+                delivers the designs, which I then bring to life using HTML, CSS
+                and JS. I write efficient and functional code that is optimized
+                for frequent updates, as we have a content schedule that changes
+                almost daily. We use Adobe Experience Manager in conjunction
+                with IBM Commerce Management Center to manage our content. When
+                I am not working on the homepage, I am reworking a landing page
+                or helping my teammates with the promotional content for the
+                rest of the site. I work on a team with two other developers and
+                a lead, and together we consistently strive to enhance code
+                quality and optimize processes.
+              </p>
+              <div class="pill__wrap">
+                <div class="pill">HTML</div>
+                <div class="pill">CSS</div>
+                <div class="pill">JavaScript</div>
+                <div class="pill">Photoshop</div>
+                <div class="pill">XD</div>
+              </div>
+              <div class="link__wrap">
+                <a href="" class="link-dark">View portfolio items ></a>
+                <a
+                  href="https://www.petco.com/shop/en/petcostore"
+                  class="link-dark"
+                  target="_blank"
+                  rel="noopener"
+                  >Visit site ></a
+                >
+              </div>
+            </div>
+            <div class="img__wrap">
+              <div class="petco-track glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                  <li class="glide__slide link-wrap" data-pos="0">
+                    <img src="/img/HP-mockup1.jpg" alt="" />
+                  </li>
+                  <li class="glide__slide link-wrap" data-pos="1">
+                    <img src="/img/holiday-hp-mockup-1.jpg" alt="" />
+                  </li>
+                  <li class="glide__slide link-wrap" data-pos="2">
+                    <img src="/img/holiday-hp-mockup-2.jpg" alt="" />
+                  </li>
+                  <li class="glide__slide link-wrap" data-pos="3">
+                    <img src="/img/mockup-3.png" alt="" />
+                  </li>
+                </ul>
+                <!-- ARROWS -->
+                <div class="glide__arrows" data-glide-el="controls">
+                  <button
+                    aria-label="back"
+                    class="glide__arrow glide__arrow--left"
+                    data-glide-dir="<"
+                  ></button>
+                  <button
+                    aria-label="next"
+                    class="glide__arrow glide__arrow--right"
+                    data-glide-dir=">"
+                  ></button>
+                </div>
+                <!-- ================== -->
+
+                <!-- BULLETS / INDICATORS -->
+                <div class="glide__bullets" data-glide-el="controls[nav]">
+                  <button
+                    title="Slide 0"
+                    type="button"
+                    class="glide__bullet"
+                    data-bullet-target="0"
+                  ></button>
+                  <button
+                    title="Slide 1"
+                    type="button"
+                    class="glide__bullet"
+                    data-bullet-target="1"
+                  ></button>
+                  <button
+                    title="Slide 2"
+                    type="button"
+                    class="glide__bullet"
+                    data-bullet-target="2"
+                  ></button>
+                  <button
+                    title="Slide 3"
+                    type="button"
+                    class="glide__bullet"
+                    data-bullet-target="3"
+                  ></button>
+                  <button
+                    title="Slide 4"
+                    type="button"
+                    class="glide__bullet"
+                    data-bullet-target="4"
+                  ></button>
+                </div>
+                <!-- ================== -->
+              </div>
+            </div>
+          </div>
+          <!-- rise vision-->
+          <div class="content__wrap">
+            <div class="img__wrap">
+              <div class="rv-track glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                  <li class="glide__slide link-wrap" data-pos="0">
+                    <img src="/img/environment-facts-bezel.jpg" alt="" />
+                  </li>
+                  <li class="glide__slide link-wrap" data-pos="1">
+                    <img src="/img/zoned-minimal-slides-bezel.jpg" alt="" />
+                  </li>
+                  <li class="glide__slide link-wrap" data-pos="2">
+                    <img src="/img/concessions-bezel.jpg" alt="" />
+                  </li>
+                  <li class="glide__slide link-wrap" data-pos="3">
+                    <img src="/img/health-tips-bezel.jpg" alt="" />
+                  </li>
+                </ul>
+                <!-- ARROWS -->
+                <div class="glide__arrows" data-glide-el="controls">
+                  <button
+                    aria-label="back"
+                    class="glide__arrow glide__arrow--left"
+                    data-glide-dir="<"
+                  ></button>
+                  <button
+                    aria-label="next"
+                    class="glide__arrow glide__arrow--right"
+                    data-glide-dir=">"
+                  ></button>
+                </div>
+                <!-- ================== -->
+
+                <!-- BULLETS / INDICATORS -->
+                <div class="glide__bullets" data-glide-el="controls[nav]">
+                  <button
+                    title="Slide 0"
+                    type="button"
+                    class="glide__bullet"
+                    data-bullet-target="0"
+                  ></button>
+                  <button
+                    title="Slide 1"
+                    type="button"
+                    class="glide__bullet"
+                    data-bullet-target="1"
+                  ></button>
+                  <button
+                    title="Slide 2"
+                    type="button"
+                    class="glide__bullet"
+                    data-bullet-target="2"
+                  ></button>
+                  <button
+                    title="Slide 3"
+                    type="button"
+                    class="glide__bullet"
+                    data-bullet-target="3"
+                  ></button>
+                  <button
+                    title="Slide 4"
+                    type="button"
+                    class="glide__bullet"
+                    data-bullet-target="4"
+                  ></button>
+                </div>
+                <!-- ================== -->
+              </div>
+            </div>
+            <div class="text__wrap">
+              <h2>
+                Web Designer | <strong>Rise Vision</strong>
+                <span style="font-size: 16px">July 2019 — Mar 2020</span>
+              </h2>
+              <p>
+                Designed and built animated digital signage templates for use in
+                over 800 schools and organizations across the world. Improved
+                user experience and satisfaction by upgrading clients' displays
+                to the latest software. Engaged with clients to learn how we
+                could improve their digital signage experience and help solve
+                any issues they had with templates.
+              </p>
+              <div class="pill__wrap">
+                <div class="pill">HTML</div>
+                <div class="pill">CSS</div>
+                <div class="pill">JavaScript</div>
+                <div class="pill">GSAP</div>
+                <div class="pill">GitHub</div>
+                <div class="pill">Sketch</div>
+              </div>
+              <div class="link__wrap">
+                <a href="" class="link-dark">View portfolio items ></a>
+                <a
+                  href="https://www.risevision.com/"
+                  class="link-dark"
+                  target="_blank"
+                  rel="noopener"
+                  >Visit site ></a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- freelance -->
+          <div class="content__wrap">
+            <div class="text__wrap">
+              <h2>
+                Web & Graphic Designer | <strong>Freelance</strong>
+                <span style="font-size: 16px">Aug 2018 — July 2019</span>
+              </h2>
+              <p>
+                Helped transform businesses by designing unique, attractive
+                brand identities and optimizing digital presence. Developed
+                clients' ideas from conception to delivery, including websites,
+                logos, print and digital ads, sales and marketing collateral,
+                social media graphics, and more. Consulted businesses on website
+                design and maintenance best practices
+              </p>
+              <div class="pill__wrap">
+                <div class="pill">HTML</div>
+                <div class="pill">CSS</div>
+                <div class="pill">Bootstrap</div>
+                <div class="pill">WordPress</div>
+                <div class="pill">Illustrator</div>
+                <div class="pill">PhotoShop</div>
+              </div>
+              <a href="" class="link-dark">View portfolio items ></a>
+            </div>
+            <div class="img__wrap">
+              <div class="freelance-track glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                  <li class="glide__slide link-wrap" data-pos="0">
+                    <img src="/img/HP-mockup1.jpg" alt="" />
+                  </li>
+                  <li class="glide__slide link-wrap" data-pos="1">
+                    <img src="/img/holiday-hp-mockup-1.jpg" alt="" />
+                  </li>
+                  <li class="glide__slide link-wrap" data-pos="2">
+                    <img src="/img/holiday-hp-mockup-2.jpg" alt="" />
+                  </li>
+                  <li class="glide__slide link-wrap" data-pos="3">
+                    <img src="/img/mockup-3.png" alt="" />
+                  </li>
+                </ul>
+                <!-- ARROWS -->
+                <div class="glide__arrows" data-glide-el="controls">
+                  <button
+                    aria-label="back"
+                    class="glide__arrow glide__arrow--left"
+                    data-glide-dir="<"
+                  ></button>
+                  <button
+                    aria-label="next"
+                    class="glide__arrow glide__arrow--right"
+                    data-glide-dir=">"
+                  ></button>
+                </div>
+                <!-- ================== -->
+
+                <!-- BULLETS / INDICATORS -->
+                <div class="glide__bullets" data-glide-el="controls[nav]">
+                  <button
+                    title="Slide 0"
+                    type="button"
+                    class="glide__bullet"
+                    data-bullet-target="0"
+                  ></button>
+                  <button
+                    title="Slide 1"
+                    type="button"
+                    class="glide__bullet"
+                    data-bullet-target="1"
+                  ></button>
+                  <button
+                    title="Slide 2"
+                    type="button"
+                    class="glide__bullet"
+                    data-bullet-target="2"
+                  ></button>
+                  <button
+                    title="Slide 3"
+                    type="button"
+                    class="glide__bullet"
+                    data-bullet-target="3"
+                  ></button>
+                  <button
+                    title="Slide 4"
+                    type="button"
+                    class="glide__bullet"
+                    data-bullet-target="4"
+                  ></button>
+                </div>
+                <!-- ================== -->
+              </div>
+            </div>
+          </div>
+          <a href="" class="link-dark">View full resume ></a>
+        </div>
+      </section>
+      <section id="about">
+        <div class="container">
+          <div class="text__wrap">
+            <h1>About Me</h1>
+            <p>
+              My goal is to help people and businesses achieve their highest
+              potential by providing the right design and functionality of their
+              online presence.
+            </p>
+            <p>
+              I received my Bachelor's degree in Digital Media Innovation from
+              Texas State University and have been working in web and graphic
+              design since. Most recently, I have worked with a digital signage
+              company called Rise Vision, but am now in search of a new
+              full-time position in web design due to the coronavirus pandemic.
+            </p>
+            <p>
+              Please feel free to reach out, say hello, and share any ideas you
+              have for working together!
+            </p>
+            <div class="link__wrap">
+              <a href="" class="link-dark">clairehansen333@gmail.com</a>
+              <a href="" class="link-dark">San Diego, CA</a>
+            </div>
+          </div>
+          <div class="img__wrap">
+            <img src="/img/23-1067382_Olivia_Hansen7605.jpg" />
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>© 2024 Claire Hansen. All rights reserved.</footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
