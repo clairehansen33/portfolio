@@ -22,6 +22,7 @@ const prepTrack = () => {
   initTrack(document.querySelector('.petco-track'), glideConfig);
   initTrack(document.querySelector('.rv-track'), glideConfig);
   initTrack(document.querySelector('.freelance-track'), glideConfig);
+  initTrack(document.querySelector('.petco-hp-track'), glideConfig);
 };
 
 const initTrack = (track, config) => {
