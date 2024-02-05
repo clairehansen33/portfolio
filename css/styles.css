@@ -79,6 +79,9 @@ body {
 :root {
   --dark: #1b083b;
 }
+.bg-dark {
+  background-color: #1b083b;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -138,11 +141,11 @@ header {
   top: 0;
   z-index: 2;
   width: 100%;
+  height: 80px;
 }
 header a.logo {
   display: flex;
   margin-left: 30px;
-  margin-top: 15px;
 }
 header img {
   max-width: 75px !important;
@@ -158,6 +161,24 @@ header img {
   border-radius: 20px;
   display: flex;
 }
+img.screenshot {
+  border: 2px solid grey;
+  border-radius: 10px;
+}
+@media screen and (min-width: 769px) {
+  .mobile-only {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+  .mobile-only {
+    display: flex;
+  }
+}
+
 #hero {
   height: 98vh;
   max-height: 750px;
@@ -457,10 +478,17 @@ footer {
   -ms-flex-pack: center;
   justify-content: center;
   background: rgba(245, 244, 252, 0.62);
+  overflow: hidden;
 }
 #portfolio .project__img img {
   width: 50%;
   height: auto;
+}
+#portfolio .project__img img.project-full {
+  width: 100%;
+}
+#portfolio .project__img img.project-small {
+  width: 50%;
 }
 #portfolio .project__info {
   padding: 2em;
@@ -487,18 +515,18 @@ footer {
   display: flex;
   max-width: 1200px;
   margin: auto;
-  padding: 48px 24px;
-  gap: 24px;
+  padding: 48px 32px;
+  gap: 32px;
 }
 .project_style_1 .media__wrap {
-  flex: 6.8;
+  flex: 2;
 }
 .project_style_1 .media__wrap img {
-  max-width: 100%;
+  max-width: calc(100% - 4px);
   height: auto;
 }
 .project_style_1 .text__wrap {
-  flex: 3.2;
+  flex: 1;
 }
 .project_style_1 .sticky__wrap {
   position: sticky;
@@ -508,4 +536,10 @@ footer {
   justify-content: center;
   gap: 16px;
   display: flex;
+}
+@media screen and (max-width: 768px) {
+  .project_style_1 .content__wrap {
+    flex-direction: column;
+    padding: 24px;
+  }
 }
