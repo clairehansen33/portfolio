@@ -6,32 +6,22 @@
 }
 
 .glide__arrow {
+  display: flex;
+  /* display: block; */
+  align-items: center;
   position: absolute;
-  display: block;
   top: 50%;
   text-transform: uppercase;
   border-radius: 50%;
   box-shadow: none;
   text-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.25);
-  opacity: 1;
   cursor: pointer;
   transition: opacity 150ms ease, border 300ms ease-in-out;
   transform: translateY(-50%);
-  line-height: 1;
   border: none;
-  background-color: rgba(255, 255, 255, 0.5);
   padding: 15px 20px;
-  font-size: 20px;
-  color: #707070;
   z-index: 2;
-}
-
-.glide__arrow:focus {
-  outline: none;
-}
-
-.glide__arrow:hover {
-  border-color: white;
+  background: none;
 }
 .glide__arrow--left {
   left: 8px;
@@ -63,7 +53,6 @@
   transition: all 300ms ease-in-out;
   cursor: pointer;
   line-height: 0;
-  box-shadow: 0 0.25em 0.5em 0 rgba(1, 0, 91, 0.1);
   margin: 0 0.25em;
 }
 
@@ -73,7 +62,6 @@
 
 .glide__bullet:hover,
 .glide__bullet:focus {
-  border: 2px solid white;
   background-color: rgba(1, 0, 91, 0.5);
 }
 .glide__bullet--active {

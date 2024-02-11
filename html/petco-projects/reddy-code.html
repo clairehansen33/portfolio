@@ -1,0 +1,1574 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../../css/styles.css" />
+  </head>
+  <body>
+    <!-- general styles -->
+    <style>
+      .reddy .container {
+        max-width: 1095px !important;
+      }
+      .reddy .row {
+        display: flex;
+        justify-content: center;
+      }
+      .reddy .col {
+        margin: 0.5rem 2%;
+      }
+      .reddy h1,
+      .reddy h2,
+      .reddy h3,
+      .reddy h4,
+      .reddy h5,
+      .reddy h6 {
+        font-family: "PetcoCircularTT-Bold", arial !important;
+        font-style: normal;
+        font-stretch: normal;
+        margin: 0;
+        padding: 0;
+      }
+      .reddy h1 {
+        font-family: "PetcoCircularTT-Bold", arial !important;
+        font-size: 40px;
+        line-height: 1.28em;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: #000;
+      }
+      .reddy h2 {
+        font-family: "PetcoCircularTT-Bold", arial !important;
+        font-size: 25px;
+        line-height: 1.28em;
+        letter-spacing: 0.25px;
+      }
+      .reddy h3 {
+        font-family: "PetcoCircularTT-Bold", arial !important;
+        font-size: 20px;
+        line-height: 1.25em;
+        letter-spacing: 0.225px;
+      }
+      .reddy h4 {
+        font-family: "PetcoCircularTT-Bold", arial !important;
+        font-size: 16px;
+        line-height: 1.2em;
+        letter-spacing: 0.2px;
+      }
+      .reddy p {
+        font-family: "PetcoCircularTT-Regular", arial !important;
+        font-size: 16px;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.38;
+        letter-spacing: 0.5px;
+        color: #000;
+      }
+      .reddy p a {
+        font-family: "PetcoCircularTT-Bold", arial !important;
+        color: #00205b;
+      }
+      .reddy button {
+        font-family: "PetcoCircularTT-Bold", arial !important;
+        width: 211px;
+        height: 56px;
+      }
+      .reddy img {
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+      }
+      .m-only {
+        display: none !important;
+      }
+      @media screen and (max-width: 768px) {
+        .reddy .row {
+          flex-direction: column;
+        }
+        .reddy h1 {
+          font-size: 35px;
+        }
+        .d-only {
+          display: none !important;
+        }
+        .m-only {
+          display: flex !important;
+        }
+      }
+    </style>
+
+    <!-- hero -->
+    <style>
+      /* michelle's method */
+      /*
+		#hero {
+			background-color: #fff;
+			overflow: hidden;
+			max-height: 580px;
+			min-height: 293px;
+			height: 67vh; 
+			width: 100%;
+		}
+		#hero .container {
+			display: flex;
+			overflow: hidden;
+			cursor: pointer;
+			max-width: 1440px !important;
+			max-height: 580px;
+			min-height: 293px;
+			height: 67vh;
+			margin: auto;
+		}
+		#hero .container .row {
+			display: flex;
+			max-height: 712px;
+			min-height: 293px;
+			height: 100%; 
+		}
+		#hero .video-holder {
+			padding-bottom: 56.25%;
+			padding-top: 30px;
+			height: 0;
+			overflow: hidden;
+		}
+		#hero .video-holder img {
+			max-width: 162px;
+			z-index: 1;
+			position: absolute;
+			top: 0;
+			left: 8%;
+			box-shadow: none;
+		}
+		#hero .video-holder iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 0;
+		}
+		@media screen and (min-width: 769px) and (max-width: 1024px) {
+			#hero .video-holder img {
+				max-width: 120px;
+			}
+		}
+		@media screen and (max-width: 768px) {
+			#hero {
+				max-height: 293px !important;
+				margin-bottom: 40px;
+			}
+			#hero .container {
+				max-height: 293px !important;
+			}
+			#hero .container .row {
+				max-height: 293px !important;
+			}
+			#hero .video-holder img {
+				max-width: 90px;
+			}
+		}
+*/
+
+      /* youtube's method */
+
+      #hero .container {
+        display: flex;
+        overflow: hidden;
+        cursor: pointer;
+        max-width: 1440px !important;
+        margin: auto;
+      }
+      #hero .container .row {
+        display: flex;
+        max-height: 712px;
+        height: 100%;
+      }
+      #hero .video-holder {
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%;
+        position: relative;
+      }
+      #hero .video-holder img {
+        max-width: 162px;
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 8%;
+        box-shadow: none;
+      }
+      #hero .video-holder iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      @media screen and (min-width: 769px) and (max-width: 1024px) {
+        #hero .video-holder img {
+          max-width: 120px;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        #hero {
+          max-height: 535px !important;
+          margin-bottom: 40px;
+        }
+        #hero .container {
+          max-height: 535px !important;
+        }
+        #hero .container .row {
+          max-height: 535px !important;
+        }
+        #hero .video-holder img {
+          max-width: 90px;
+        }
+      }
+    </style>
+
+    <section>
+      <div id="hero" class="reddy">
+        <div class="container">
+          <div class="row">
+            <div class="video-holder">
+              <img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_162/brand-reddy-logo"
+                alt="Reddy logo."
+                class="img-responsive"
+              />
+              <iframe
+                src="https://player.vimeo.com/video/554745017?autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://player.vimeo.com/api/player.js"></script>
+
+    <!-- style for life -->
+    <style>
+      #style-for-life {
+        background: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0/reddy-background-texture")
+          center repeat;
+        background-size: cover;
+        padding: 40px 0;
+      }
+      #style-for-life .heading-holder {
+        text-align: center;
+        margin: 0.5rem 2% 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #style-for-life .heading-holder h1 {
+        margin-bottom: 10px;
+      }
+      #style-for-life .heading-holder p {
+        max-width: 700px;
+      }
+      #style-for-life .content-holder {
+        cursor: pointer;
+      }
+      #style-for-life img {
+        max-height: 389px;
+      }
+      #style-for-life .text-holder {
+        margin-top: 15px;
+      }
+      #style-for-life .text-holder h2 {
+        color: #000;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: clamp(17px, 2.2vw, 23px);
+      }
+      @media screen and (max-width: 768px) {
+        #style-for-life .row:nth-child(2) {
+          display: block;
+        }
+        #style-for-life .heading-holder {
+          margin: 0.5rem 20px 40px;
+        }
+        #style-for-life .content-holder {
+          margin-bottom: 40px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        #style-for-life img {
+          max-height: 294px;
+          width: auto;
+        }
+        #style-for-life .text-holder h2 {
+          font-size: 20px;
+          max-width: 300px;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        #style-for-life .heading-holder p {
+          max-width: 300px;
+        }
+      }
+    </style>
+
+    <section class="spacing-bottom-md">
+      <div id="style-for-life" class="reddy">
+        <div class="container">
+          <div class="row">
+            <div class="heading-holder">
+              <h1>Style made for life together</h1>
+
+              <p class="d-only">
+                Level up with gear built for your everyday adventures. From
+                hopping around town to staying right at home, every moment you
+                spend together is what moves us. That’s why we go the extra mile
+                on the details that look good on your pup and always have their
+                back.
+              </p>
+
+              <p class="m-only">
+                Level up with gear built for your everyday adventures.
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-4 col-12-sm content-holder">
+              <a href="#designed-to-last">
+                <img
+                  src="https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_309/reddy-designed-to-last-645w-800h"
+                  class="center-block img-responsive"
+                  alt="Young woman petting a Dalmatian that's wearing a Reddy harness."
+                />
+
+                <div class="text-holder">
+                  <h2>Designed to last</h2>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-4 col-12-sm content-holder">
+              <a href="#seriously-smart-solutions">
+                <img
+                  src="https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_309/reddy-smart-solutions-1060w-1333h"
+                  class="center-block img-responsive"
+                  alt="Pug being carried in a Reddy travel carrier."
+                />
+
+                <div class="text-holder">
+                  <h2>Seriously smart solutions</h2>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-4 col-12-sm content-holder">
+              <a href="#durable-sustainable-gear">
+                <img
+                  src="https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_309/reddy-sustainable-materials-1065w-1333h"
+                  class="center-block img-responsive"
+                  alt="Young man clipping a lease onto a Border Collie wearing a Reddy harness."
+                />
+
+                <div class="text-holder">
+                  <h2>Made with sustainable materials</h2>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- categories -->
+    <style>
+      #categories {
+        background: #eb3b3e;
+      }
+      #categories .container {
+        padding: 40px 0;
+      }
+      #categories .col:nth-child(1) {
+        flex: 1.5;
+      }
+      #categories .col:nth-child(2),
+      #categories .col:nth-child(3) {
+        flex: 1;
+      }
+      #categories .col:nth-child(2) .content-holder:nth-child(1),
+      #categories .col:nth-child(3) .content-holder:nth-child(1) {
+        margin-bottom: 40px;
+      }
+      #categories .content-holder {
+        cursor: pointer;
+      }
+      #categories h2 {
+        color: #fff;
+        margin: 20px 0 5px;
+      }
+      #categories p {
+        color: #fff;
+        margin-bottom: 10px;
+      }
+      #categories a {
+        color: #fff;
+      }
+      @media screen and (max-width: 768px) {
+        #categories .row {
+          flex-direction: column;
+          align-items: center;
+        }
+        #categories .content-holder {
+          max-width: 450px;
+          margin-bottom: 40px;
+        }
+        #categories .col {
+          margin: 0 20px;
+        }
+      }
+    </style>
+
+    <section class="spacing-top-md spacing-bottom-md">
+      <div id="categories" class="reddy">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="content-holder link-wrap">
+                <img
+                  src="https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_413/reddy-collars-leashes-harnesses-855w-1285h"
+                  alt=""
+                  class="img-responsive center-block"
+                />
+
+                <h2>Collars, Leashes &amp; Harnesses</h2>
+
+                <p>
+                  Best-in-class materials, durability testing and more to keep
+                  up with your every move.
+                </p>
+
+                <p>
+                  <a
+                    href="/shop/en/petcostore/brand/reddy/dog/dog-collars-leashes-and-harnesses"
+                    manual_cm_sp="aboutreddy:na:categories:1:collarsleashesharnesses:shopnow"
+                    onclick="clickTrackLink(this);"
+                    class="main-link clickable"
+                    >Shop Now</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="content-holder link-wrap">
+                <img
+                  src="https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_275/reddy-apparel-accessories-1000w-667h"
+                  alt=""
+                  class="img-responsive center-block"
+                />
+
+                <h2>Apparel &amp; Accessories</h2>
+
+                <p>Designed to look and feel as good as your own.</p>
+
+                <p>
+                  <a
+                    href="/shop/en/petcostore/brand/reddy/dog/dog-apparel"
+                    manual_cm_sp="aboutreddy:na:categories:2:apparelaccessories:shopnow"
+                    onclick="clickTrackLink(this);"
+                    class="main-link clickable"
+                    >Shop Now</a
+                  >
+                </p>
+              </div>
+
+              <div class="content-holder link-wrap">
+                <img
+                  src="https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_275/reddy-beds-1000w-1000h"
+                  alt=""
+                  class="img-responsive center-block"
+                />
+
+                <h2>Beds</h2>
+
+                <p>Cozy and cool comforts for your shared space.</p>
+
+                <p>
+                  <a
+                    href="/shop/en/petcostore/brand/reddy/dog/dog-beds-and-bedding"
+                    manual_cm_sp="aboutreddy:na:categories:4:beds:shopnow"
+                    onclick="clickTrackLink(this);"
+                    class="main-link clickable"
+                    >Shop Now</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="content-holder link-wrap">
+                <img
+                  src="https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_275/reddy-travel-889w-1000h"
+                  alt=""
+                  class="img-responsive center-block"
+                />
+
+                <h2>Travel</h2>
+
+                <p>
+                  Everything you need to hit up your favorite spots together in
+                  style.
+                </p>
+
+                <p>
+                  <a
+                    href="/shop/en/petcostore/brand/reddy/dog/travel-outdoor-supplies"
+                    manual_cm_sp="aboutreddy:na:categories:3:travel:shopnow"
+                    onclick="clickTrackLink(this);"
+                    class="main-link clickable"
+                    >Shop Now</a
+                  >
+                </p>
+              </div>
+
+              <div class="content-holder link-wrap">
+                <img
+                  src="https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_275/reddy-bowls-1000w-617h"
+                  alt=""
+                  class="img-responsive center-block"
+                />
+
+                <h2>Bowls</h2>
+
+                <p>Tasteful settings that fit right in.</p>
+
+                <p>
+                  <a
+                    href="/shop/en/petcostore/brand/reddy/dog/dog-feeding-supplies"
+                    manual_cm_sp="aboutreddy:na:categories:5:bowls:shopnow"
+                    onclick="clickTrackLink(this);"
+                    class="main-link clickable"
+                    >Shop Now</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- designed to last -->
+    <style>
+      #designed-to-last {
+        height: 551px;
+        display: flex;
+        align-items: center;
+      }
+      #designed-to-last .bg-holder {
+        background: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0/reddy-designed-to-last-bg-1195w-551h")
+          left no-repeat;
+        background-size: cover;
+        height: 551px;
+        width: 83%;
+        position: absolute;
+      }
+      #designed-to-last .col:nth-child(1) {
+        display: flex;
+        align-items: flex-end;
+      }
+      #designed-to-last .col:nth-child(1) img {
+        max-width: 279px;
+      }
+      #designed-to-last .col:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      #designed-to-last .col:nth-child(2) .content-holder {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 20px;
+      }
+      #designed-to-last .col:nth-child(2) .content-holder .text-holder {
+        max-width: 310px;
+        margin-right: 20px;
+      }
+      #designed-to-last .col:nth-child(2) .content-holder .text-holder h2 {
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        font-size: clamp(18px, 2.4vw, 25px);
+        color: #000;
+      }
+      #designed-to-last .col:nth-child(2) .content-holder .text-holder p {
+        font-size: clamp(14px, 1.6vw, 16px);
+      }
+      #designed-to-last .col:nth-child(2) .content-holder img {
+        max-width: 205px;
+      }
+      #designed-to-last .col:nth-child(2) img {
+        max-width: 550px;
+      }
+      #designed-to-last .col:nth-child(4) {
+        display: flex;
+        align-items: flex-end;
+      }
+      #designed-to-last .col:nth-child(4) img {
+        max-width: 208px;
+      }
+      @media screen and (min-width: 769px) and (max-width: 1024px) {
+        #designed-to-last {
+          height: 470px;
+        }
+        #designed-to-last .bg-holder {
+          height: 470px;
+        }
+        #designed-to-last .col:nth-child(2) .content-holder img {
+          max-width: 150px;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        #designed-to-last {
+          height: 698px;
+        }
+        #designed-to-last .bg-holder {
+          width: 95%;
+          height: 698px;
+        }
+        #designed-to-last .container {
+          max-width: 450px !important;
+        }
+        #designed-to-last .row {
+          flex-direction: column;
+        }
+        #designed-to-last .col:nth-child(2) {
+          margin: 0.5rem 20px;
+        }
+        #designed-to-last .col:nth-child(2) .content-holder .text-holder h2 {
+          font-size: 25px;
+        }
+        #designed-to-last .col:nth-child(2) .content-holder .text-holder p {
+          font-size: 16px;
+        }
+        #designed-to-last .col:nth-child(3) {
+          margin: 0.5rem 10% 40px 0;
+        }
+        #designed-to-last .col:nth-child(3) .img-holder {
+          height: 215px;
+          overflow: hidden;
+        }
+        #designed-to-last .col:nth-child(3) .img-holder:first-of-type {
+          width: 144px;
+          margin-right: 15px;
+        }
+        #designed-to-last .col:nth-child(3) .img-holder:last-of-type {
+          width: 174px;
+        }
+        #designed-to-last .col:nth-child(3) .img-holder:first-of-type img {
+          height: 100%;
+          object-fit: cover;
+        }
+        #designed-to-last .col:nth-child(3) .img-holder:last-of-type img {
+          height: 100%;
+          object-fit: cover;
+        }
+        #designed-to-last .col:nth-child(5) {
+          justify-content: flex-end;
+          margin-right: 5%;
+        }
+        #designed-to-last .col:nth-child(5) img {
+          max-width: 325px;
+        }
+      }
+    </style>
+
+    <section class="spacing-top-md spacing-bottom-md">
+      <div id="designed-to-last" class="reddy">
+        <div class="bg-holder"></div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col d-only">
+              <img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_279/reddy-designed-to-last-strap-558w-912h"
+                alt="Leather strap with Reddy logo engraved in it."
+                class="img-responsive"
+              />
+            </div>
+
+            <div class="col">
+              <div class="content-holder">
+                <div class="text-holder">
+                  <h2>Designed to last</h2>
+
+                  <p>
+                    By combining details inspired by your own wardrobe with
+                    durable materials, we create timeless styles that look good
+                    now and for years to come.
+                  </p>
+                </div>
+
+                <img
+                  src="https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_205/reddy-designed-to-last-collar-416w-389h"
+                  alt="Person clipping collar onto a Dalmatian."
+                  class="img-responsive d-only"
+                />
+              </div>
+
+              <img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_550/reddy-designed-to-last-bed-440w-180h"
+                alt="Yellow and white dog laying on a Reddy bed."
+                class="img-responsive d-only"
+              />
+            </div>
+
+            <div class="col m-only">
+              <div class="img-holder">
+                <img
+                  src="https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_144/reddy-designed-to-last-strap-558w-912h"
+                  alt="Leather strap with Reddy logo engraved in it."
+                  class="img-responsive"
+                />
+              </div>
+
+              <div class="img-holder">
+                <img
+                  src="https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_174/reddy-designed-to-last-jacket-348w-437h"
+                  alt="Person zipping up a Reddy jacket on a dog."
+                  class="img-responsive"
+                />
+              </div>
+            </div>
+
+            <div class="col d-only">
+              <img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_208/reddy-designed-to-last-jacket-416w-774h"
+                alt="Person zipping up a Reddy jacket on a dog."
+                class="img-responsive"
+              />
+            </div>
+
+            <div class="col m-only">
+              <img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_325/reddy-designed-to-last-bed-650w-342h"
+                alt="Yellow and white dog laying on a Reddy bed."
+                class="img-responsive"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- seriously smart solutions -->
+    <style>
+      #seriously-smart-solutions {
+        height: 506px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+      #seriously-smart-solutions .bg-holder {
+        background: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0/reddy-seriously-smart-solutions-bg-texture-506w-1150h")
+          right no-repeat;
+        background-size: cover;
+        height: 506px;
+        width: 81%;
+        position: absolute;
+      }
+      #seriously-smart-solutions .col:nth-child(1) {
+        display: flex;
+        align-items: flex-end;
+      }
+      #seriously-smart-solutions .col:nth-child(1) img {
+        max-width: 465px;
+      }
+      #seriously-smart-solutions .col:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      #seriously-smart-solutions .col:nth-child(2) .content-holder {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 20px;
+      }
+      #seriously-smart-solutions
+        .col:nth-child(2)
+        .content-holder
+        .text-holder {
+        max-width: 310px;
+      }
+      #seriously-smart-solutions
+        .col:nth-child(2)
+        .content-holder
+        .text-holder
+        h2 {
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        font-size: clamp(18px, 2.4vw, 25px);
+        color: #000;
+      }
+      #seriously-smart-solutions
+        .col:nth-child(2)
+        .content-holder
+        .text-holder
+        p {
+        font-size: clamp(14px, 1.6vw, 16px);
+      }
+      #seriously-smart-solutions .col:nth-child(2) img {
+        max-width: 311px;
+      }
+      #seriously-smart-solutions .col:nth-child(5) {
+        display: flex;
+        align-items: flex-end;
+      }
+      #seriously-smart-solutions .col:nth-child(5) img {
+        max-width: 258px;
+      }
+      @media screen and (min-width: 769px) and (max-width: 1024px) {
+        #seriously-smart-solutions {
+          height: 450px;
+        }
+        #seriously-smart-solutions .bg-holder {
+          height: 450px;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        #seriously-smart-solutions {
+          height: 1300px;
+        }
+        #seriously-smart-solutions .bg-holder {
+          width: 100%;
+          height: 1300px;
+          background-repeat: repeat-y;
+          background-size: auto;
+        }
+        #seriously-smart-solutions .container {
+          max-width: 450px !important;
+        }
+        #seriously-smart-solutions .row {
+          flex-direction: column;
+        }
+        #seriously-smart-solutions .col:nth-child(2) {
+          margin: 0.5rem 20px;
+        }
+        #seriously-smart-solutions
+          .col:nth-child(2)
+          .content-holder
+          .text-holder
+          h2 {
+          font-size: 25px;
+        }
+        #seriously-smart-solutions
+          .col:nth-child(2)
+          .content-holder
+          .text-holder
+          p {
+          font-size: 16px;
+        }
+        #seriously-smart-solutions .col:nth-child(3) {
+          margin: 0.5rem 0 40px 2%;
+          justify-content: flex-end;
+        }
+        #seriously-smart-solutions .col:nth-child(3) img {
+          max-width: 315px;
+        }
+        #seriously-smart-solutions .col:nth-child(4) {
+          margin: 0.5rem 2% 40px 0;
+        }
+        #seriously-smart-solutions .col:nth-child(4) img {
+          max-width: 323px;
+        }
+        #seriously-smart-solutions .col:nth-child(5) img {
+          max-width: 255px;
+        }
+      }
+    </style>
+
+    <section class="spacing-top-md spacing-bottom-md">
+      <div id="seriously-smart-solutions" class="reddy">
+        <div class="bg-holder"></div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col d-only">
+              <img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_465/reddy-seriously-smart-solutions-chart-929w-840h"
+                alt="Diagram explaining the different parts of a Reddy jacket."
+                class="img-responsive"
+              />
+            </div>
+
+            <div class="col">
+              <div class="content-holder">
+                <div class="text-holder">
+                  <h2>Seriously smart solutions</h2>
+
+                  <p>
+                    We’re constantly breaking boundaries of traditional design,
+                    incorporating best-in-class performance fabrics and
+                    intuitive features that make it easier to bring them
+                    everywhere.
+                  </p>
+                </div>
+              </div>
+
+              <img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_311/reddy-seriously-smart-solutions-jacket-622w-373h"
+                alt="Close-up shot of a dog wearing a Reddy jacket."
+                class="img-responsive d-only"
+              />
+            </div>
+
+            <div class="col m-only">
+              <img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_315/reddy-seriously-smart-solutions-chart-929w-840h"
+                alt="Diagram explaining the different parts of a Reddy jacket."
+                class="img-responsive"
+              />
+            </div>
+
+            <div class="col m-only">
+              <img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_323/reddy-seriously-smart-solutions-jacket-622w-373h"
+                alt="Close-up shot of a dog wearing a Reddy jacket."
+                class="img-responsive"
+              />
+            </div>
+
+            <div class="col">
+              <img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_258/reddy-seriously-smart-solutions-bag-533w-840h"
+                alt="Young woman carrying a small dog inside a Reddy over-the-shoulder carrier."
+                class="img-responsive center-block"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- durable sustainable gear -->
+    <style>
+      #durable-sustainable-gear {
+        height: 506px;
+        display: flex;
+        align-items: center;
+      }
+      #durable-sustainable-gear .bg-holder {
+        background: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0/reddy-durable-sustainable-materials-bg-1440w-804h")
+          left no-repeat;
+        background-size: cover;
+        height: 506px;
+        width: 81%;
+        position: absolute;
+        margin-bottom: 20px;
+      }
+      #durable-sustainable-gear .row {
+        align-items: flex-end;
+      }
+      #durable-sustainable-gear .col:nth-child(1) {
+        display: flex;
+        align-items: flex-end;
+        flex: 0.85;
+      }
+      #durable-sustainable-gear .col:nth-child(1) img {
+        max-width: 279px;
+      }
+      #durable-sustainable-gear .col:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        flex: 0.9;
+      }
+      #durable-sustainable-gear .col:nth-child(2) .content-holder {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 20px;
+      }
+      #durable-sustainable-gear .col:nth-child(2) .content-holder .text-holder {
+        position: absolute;
+      }
+      #durable-sustainable-gear
+        .col:nth-child(2)
+        .content-holder
+        .text-holder
+        h2 {
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        font-size: clamp(18px, 2.4vw, 25px);
+        color: #000;
+        max-width: 360px;
+      }
+      #durable-sustainable-gear
+        .col:nth-child(2)
+        .content-holder
+        .text-holder
+        p {
+        font-size: clamp(14px, 1.6vw, 16px);
+        max-width: 320px;
+      }
+      #durable-sustainable-gear .col:nth-child(2) img {
+        max-width: 285px;
+      }
+      #durable-sustainable-gear .col:nth-child(3) {
+        flex: 1.5;
+      }
+      #durable-sustainable-gear .col:nth-child(3) .video-holder {
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%;
+        position: relative;
+      }
+      #durable-sustainable-gear .col:nth-child(3) .video-holder iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      @media screen and (min-width: 769px) and (max-width: 1024px) {
+        #durable-sustainable-gear {
+          height: 470px;
+        }
+        #durable-sustainable-gear .bg-holder {
+          height: 470px;
+          margin-bottom: 40px;
+        }
+      }
+      @media screen and (min-width: 769px) and (max-width: 900px) {
+        #durable-sustainable-gear
+          .col:nth-child(2)
+          .content-holder
+          .text-holder
+          p {
+          max-width: 290px;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        #durable-sustainable-gear {
+          height: 1260px;
+          justify-content: flex-end;
+        }
+        #durable-sustainable-gear .bg-holder {
+          width: 95%;
+          height: 1260px;
+          background-repeat: repeat-y;
+          background-size: auto;
+          margin-bottom: 0;
+        }
+        #durable-sustainable-gear .container {
+          max-width: 450px !important;
+        }
+        #durable-sustainable-gear .row {
+          flex-direction: column;
+          align-items: center;
+        }
+        #durable-sustainable-gear .col:nth-child(2) {
+          margin: 0.5rem 20px;
+        }
+        #durable-sustainable-gear
+          .col:nth-child(2)
+          .content-holder
+          .text-holder {
+          position: relative;
+        }
+        #durable-sustainable-gear
+          .col:nth-child(2)
+          .content-holder
+          .text-holder
+          h2 {
+          font-size: 25px;
+          max-width: 450px;
+        }
+        #durable-sustainable-gear
+          .col:nth-child(2)
+          .content-holder
+          .text-holder
+          p {
+          font-size: 16px;
+        }
+        #durable-sustainable-gear .col:nth-child(3) {
+          margin: 0.5rem 0 40px;
+          width: 100%;
+        }
+        #durable-sustainable-gear .col:nth-child(3) img {
+          max-width: 450px;
+        }
+        #durable-sustainable-gear .col:nth-child(4) {
+          margin: 0.5rem 0 40px 2%;
+          width: 100%;
+          justify-content: flex-end;
+        }
+        #durable-sustainable-gear .col:nth-child(4) img {
+          max-width: 271px;
+        }
+        #durable-sustainable-gear .col:nth-child(5) {
+          margin-left: 0;
+          width: 100%;
+        }
+        #durable-sustainable-gear .col:nth-child(5) img {
+          max-width: 255px;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        #durable-sustainable-gear
+          .col:nth-child(2)
+          .content-holder
+          .text-holder {
+          max-width: 296px;
+        }
+      }
+    </style>
+
+    <section class="spacing-top-md spacing-bottom-md">
+      <div id="durable-sustainable-gear" class="reddy">
+        <div class="bg-holder"></div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col d-only">
+              <img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_279/reddy-durable-sustainable-materials-green-bed-556w-839h"
+                alt="Product made with recycled materials."
+                class="img-responsive"
+              />
+            </div>
+
+            <div class="col">
+              <div class="content-holder">
+                <div class="text-holder">
+                  <h2>Durable gear made with sustainable materials</h2>
+
+                  <p class="d-only">
+                    What’s right for your best friend should also be right for
+                    the planet. That’s why we use quality fabrics made from
+                    recycled materials to craft tough gear that goes easy on the
+                    environment.
+                  </p>
+
+                  <p class="m-only">
+                    We’re paving a pet-friendly path to sustainability through
+                    durable products made with recycled materials.
+                  </p>
+                </div>
+              </div>
+
+              <img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_285/reddy-durable-sustainable-materials-straps-569w-480h"
+                alt="Product made with recycled materials."
+                class="img-responsive d-only"
+              />
+            </div>
+
+            <div class="col">
+              <div class="video-holder">
+                <iframe
+                  src="https://www.youtube.com/embed/5mjx-69LkAE"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+
+            <div class="col m-only">
+              <img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_271/reddy-durable-sustainable-materials-green-bed-556w-839h"
+                alt="Product made with recycled materials."
+                class="img-responsive"
+              />
+            </div>
+
+            <div class="col m-only">
+              <img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_255/reddy-durable-sustainable-materials-straps-569w-480h"
+                alt="Product made with recycled materials."
+                class="img-responsive"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- latest styles -->
+    <style>
+      #latest-styles {
+        height: 500px;
+        background: #eb3b3e;
+      }
+      #latest-styles .container {
+        max-width: 1440px !important;
+      }
+      #latest-styles .row {
+        height: 500px;
+        align-items: center;
+      }
+      #latest-styles .col {
+        flex: 1;
+      }
+      #latest-styles .text-holder {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #latest-styles .text-holder > div {
+        max-width: 600px;
+        width: 100%;
+      }
+      #latest-styles .text-holder h2 {
+        color: #fff;
+        margin-bottom: 10px;
+      }
+      #latest-styles .text-holder p {
+        color: #fff;
+        margin-bottom: 10px;
+        max-width: 340px;
+      }
+      #latest-styles .text-holder a {
+        color: #fff;
+        margin-bottom: 10px;
+      }
+      #latest-styles .img-holder {
+        display: flex;
+        align-items: center;
+        margin-left: 0;
+      }
+      #latest-styles-carousel .carousel-control {
+        display: none;
+      }
+      #latest-styles-carousel .carousel-indicators {
+        bottom: 0px;
+        padding: 4px;
+        border-radius: 5px 5px 0px 0px;
+        background-color: transparent;
+        margin-left: 0;
+      }
+      #latest-styles-carousel .carousel-indicators li {
+        width: 12px;
+        height: 12px;
+        border: 1px solid #fff;
+        opacity: 1;
+        margin: 0 2px;
+      }
+      #latest-styles-carousel .carousel-indicators .active {
+        background-color: #fff;
+      }
+      #latest-styles-carousel .carousel-inner > .item:not(:first-child) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+      #latest-styles .carousel-actions {
+        background: none;
+      }
+      #latest-styles-carousel img {
+        max-width: 720px;
+      }
+      @media screen and (min-width: 769px) and (max-width: 1024px) {
+        #latest-styles {
+          height: 380px;
+        }
+        #latest-styles .row {
+          height: 380px;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        #latest-styles {
+          height: 830px;
+        }
+        #latest-styles .row {
+          flex-direction: column-reverse;
+          height: 830px;
+        }
+        #latest-styles .text-holder {
+          margin: 0.5rem 20px;
+        }
+        #latest-styles .text-holder div {
+          max-width: 450px;
+        }
+        #latest-styles .text-holder h2 {
+          max-width: 200px;
+        }
+        #latest-styles .text-holder p {
+          max-width: 450px;
+        }
+        #latest-styles .img-holder {
+          margin-right: 0;
+          justify-content: center;
+          padding-bottom: 30px;
+        }
+        #latest-styles-carousel .item {
+          height: 524px;
+        }
+        #latest-styles-carousel .item:nth-of-type(3) img {
+          object-position: 65% 50%;
+        }
+        #latest-styles-carousel img {
+          max-width: 768px;
+          object-fit: cover;
+          height: 100%;
+        }
+      }
+    </style>
+
+    <section class="spacing-top-md spacing-bottom-md">
+      <div id="latest-styles" class="reddy">
+        <div class="container">
+          <div class="row">
+            <div class="col img-holder">
+              <div
+                id="latest-styles-carousel"
+                class="carousel slide swipe-carousel"
+                data-ride="carousel"
+              >
+                <div class="carousel-actions">
+                  <ol class="carousel-hero-indicators carousel-indicators">
+                    <li
+                      data-target="#latest-styles"
+                      data-slide-to="0"
+                      class="active"
+                    ></li>
+                    <li
+                      data-target="#latest-styles"
+                      data-slide-to="1"
+                      class=""
+                    ></li>
+                    <li
+                      data-target="#latest-styles"
+                      data-slide-to="2"
+                      class=""
+                    ></li>
+                  </ol>
+                </div>
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <img
+                      src="https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_720/reddy-latest-styles-slide-1"
+                      alt="Small dog wearing a Reddy jacket and being walked on a leash."
+                      class="img-responsive"
+                    />
+                  </div>
+
+                  <div class="item">
+                    <img
+                      src="https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_720/reddy-latest-styles-slide-2"
+                      alt="Small dog wearing a Reddy jacket and being walked on a leash."
+                      class="img-responsive"
+                    />
+                  </div>
+
+                  <div class="item">
+                    <img
+                      src="https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_720/reddy-latest-styles-slide-3"
+                      alt="Small dog wearing a Reddy jacket and being walked on a leash."
+                      class="img-responsive"
+                    />
+                  </div>
+                </div>
+                <a
+                  class="carousel-control left"
+                  href="#latest-styles-carousel"
+                  data-slide="prev"
+                  >previous</a
+                >
+                <a
+                  class="carousel-control right"
+                  href="#latest-styles-carousel"
+                  data-slide="next"
+                  >next</a
+                >
+              </div>
+            </div>
+
+            <div class="col text-holder">
+              <div>
+                <h2>DISCOVER OUR LATEST STYLES</h2>
+
+                <p>
+                  Get a head start on everyday adventures with our newest styles
+                  and innovation.
+                </p>
+
+                <p>
+                  <a
+                    href="/shop/en/petcostore/brand/reddy"
+                    manual_cm_sp="aboutreddy:na:banner:1:lateststyles:shopnow"
+                    onclick="clickTrackLink(this);"
+                    class="main-link clickable"
+                    >Shop Now</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- articles -->
+    <style>
+      #articles .bg-holder {
+        background: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0/reddy-background-texture")
+          center repeat;
+        background-size: cover;
+        height: 452px;
+        position: absolute;
+        width: 100%;
+        margin-top: 200px;
+      }
+      #articles .row {
+        align-items: center;
+      }
+      #articles .content-holder {
+        cursor: pointer;
+      }
+      #articles .content-holder:first-of-type img {
+        max-width: 468px;
+      }
+      #articles .content-holder:last-of-type img {
+        max-width: 347px;
+      }
+      #articles .content-holder:first-of-type .text-holder {
+        max-width: 300px;
+      }
+      #articles .content-holder:last-of-type .text-holder {
+        max-width: 347px;
+      }
+      #articles .text-holder {
+        margin-top: 15px;
+      }
+      #articles .text-holder h2 {
+        color: #000;
+        margin-bottom: 10px;
+      }
+      #articles .text-holder p:first-of-type {
+        margin-bottom: 10px;
+        max-width: 270px;
+      }
+      #articles .text-holder a {
+        color: #000;
+      }
+      @media screen and (max-width: 768px) {
+        #articles {
+          background: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0/reddy-background-texture")
+            center repeat;
+          background-size: cover;
+          height: 960px;
+          padding: 40px 0 40px;
+        }
+        #articles .bg-holder {
+          display: none;
+        }
+        #articles .container {
+          max-width: 450px !important;
+        }
+        #articles .row {
+          display: block;
+        }
+        #articles .content-holder {
+          margin-bottom: 40px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          align-items: flex-start;
+          padding: 0 8%;
+        }
+        #articles img {
+          max-height: 294px;
+          width: auto;
+        }
+        #articles .content-holder:first-of-type .text-holder,
+        #articles .content-holder:last-of-type .text-holder {
+          max-width: 450px;
+        }
+        #articles .content-holder:first-of-type img {
+          width: 100%;
+        }
+      }
+    </style>
+
+    <section class="spacing-top-md spacing-bottom-md">
+      <div id="articles" class="reddy">
+        <div class="bg-holder"></div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-6 col-12-sm content-holder link-wrap">
+              <img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_468/reddy-functional-style"
+                class="img-responsive"
+                alt="Boxer being walked with a Reddy harness on."
+              />
+
+              <div class="text-holder">
+                <h2>Functional style that fits your lifestyle</h2>
+
+                <p>
+                  Read up on our latest gear built to enhance your days
+                  together.
+                </p>
+
+                <p>
+                  <a
+                    href="http://www.petco.com/content/petco/PetcoStore/en_US/pet-services/resource-center/product-guides/together-is-everything.html"
+                    manual_cm_sp="aboutreddy:na:articles:1:functionalstyle:learnmore"
+                    onclick="clickTrackLink(this);"
+                    class="main-link clickable"
+                    >Learn More</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="col-6 col-12-sm content-holder link-wrap">
+              <img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_347/reddy-sustainability"
+                class="img-responsive"
+                alt="Close-up shot of a tag on a Reddy garment."
+              />
+
+              <div class="text-holder">
+                <h2>Hop on our pet-friendly path to sustainability</h2>
+
+                <p>
+                  Learn about the journey we’re on to create a better future.
+                </p>
+
+                <p>
+                  <a
+                    href="http://www.petco.com/content/petco/PetcoStore/en_US/pet-services/resource-center/product-guides/not-so-fast-fashion.html"
+                    manual_cm_sp="aboutreddy:na:articles:2:petfriendlysustainability:learnmore"
+                    onclick="clickTrackLink(this);"
+                    class="main-link clickable"
+                    >Learn More</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- link wrapping script -->
+    <script>
+      const cards = Array.from(
+        document.querySelectorAll(".contentRecommendationWidget .link-wrap")
+      );
+      cards.forEach((card) => {
+        const mainLink = card.querySelector(".main-link");
+        const handleClick = () => {
+          const noTextSelected = !window.getSelection().toString();
+          if (noTextSelected) {
+            mainLink.click();
+          }
+        };
+        const clickableElements = [...card.querySelectorAll(".clickable")];
+        clickableElements.forEach((ele) =>
+          ele.addEventListener("click", (e) => e.stopPropagation())
+        );
+        card.addEventListener("click", handleClick);
+      });
+    </script>
+  </body>
+</html>

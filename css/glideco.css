@@ -68,35 +68,26 @@
 }
 
 .glide__track .glide__bullet.active {
-  border: 2px solid white;
+  border: 2px solid #f7effe;
   outline: none;
 }
 
 .glide__arrows {
   display: block;
 }
-.glide__arrows .glide__arrow {
-  border-radius: 50%;
-  border: none;
-  background-color: #fff;
-  font-size: 20px;
-  color: #707070;
-  box-shadow: none;
-  text-shadow: none;
-  max-width: 45px;
-  height: 45px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  color: transparent !important;
-}
 
 .glide__arrows .glide__arrow--left {
-  background-image: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_20/slider-arrow-left");
   left: 1rem;
 }
 .glide__arrows .glide__arrow--right {
-  background-image: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_20/slider-arrow-right");
   right: 1rem;
+}
+.glide__arrows svg {
+  max-width: 50px;
+  max-height: 50px;
+}
+.glide__arrow:hover {
+  opacity: 1;
 }
 
 /* @media screen and (max-width: 768px) {

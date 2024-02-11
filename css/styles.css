@@ -481,11 +481,8 @@ footer {
   overflow: hidden;
 }
 #portfolio .project__img img {
-  width: 50%;
-  height: auto;
-}
-#portfolio .project__img img.project-full {
   width: 100%;
+  height: auto;
 }
 #portfolio .project__img img.project-small {
   width: 50%;
@@ -507,7 +504,7 @@ footer {
   }
 }
 
-/* benefits */
+/* project pages */
 .project_style_1 .container {
   max-width: none !important;
 }

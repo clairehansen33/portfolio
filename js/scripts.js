@@ -22,7 +22,6 @@ const prepTrack = () => {
   initTrack(document.querySelector('.petco-track'), glideConfig);
   initTrack(document.querySelector('.rv-track'), glideConfig);
   initTrack(document.querySelector('.freelance-track'), glideConfig);
-  initTrack(document.querySelector('.petco-hp-track'), glideConfig);
 };
 
 const initTrack = (track, config) => {
@@ -104,7 +103,7 @@ const getTrackPadding = (track, config, arrows) => {
     trackPadding.paddingTopBottom = 0;
     trackPadding.paddingSides = 0;
   } else {
-    trackPadding.paddingTopBottom = 25;
+    trackPadding.paddingTopBottom = 0;
     trackPadding.paddingSides = 4;
   }
   return trackPadding;
